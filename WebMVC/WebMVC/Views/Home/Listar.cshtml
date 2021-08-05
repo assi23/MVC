@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<WebMVC.Models.Cerveja>
+@{
 	ViewBag.Titlle = "Listar";
 }
 
@@ -9,7 +10,13 @@
 	<th>Distribuidora:</th>
 	</thead>
 	<tbody>
-		<tr>
-		</tr>
+		@foreach (var cerva in Model)
+		{
+			<tr>
+				<td>@cerva.Marca</td>
+				<td>@cerva.Tipo</td>
+				<td>@cerva.Distribuidora</td>
+			</tr>
+		}
 	</tbody>
 </table>

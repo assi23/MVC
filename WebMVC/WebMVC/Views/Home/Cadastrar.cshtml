@@ -2,15 +2,20 @@
 	ViewBag.Titlle = "Cadastrar";
 }
 
-<fieldset>
-<label for="marca">Marca:</label>
-<input type="text" name="marca" id="marca">
+<div>
+	<fieldset>
+		<form action="/Home/Salvar" method="post">
+			<label for="marca">Marca:</label>
+			<input type="text" name="marca" id="marca">
 
-<label for="Tipo">Tipo:</label>
-<input type="text" name="tipo" id="tipo">
+			<label for="Tipo">Tipo:</label>
+			<input type="text" name="tipo" id="tipo">
 
-<label for="distri">Distribuidora:</label>
-<input type="text" name="distri" id="distri">
+			<label for="distri">Distribuidora:</label>
+			<input type="text" name="distribuidora" id="distribuidora">
 
-</fieldset>
-<button onclick="salvar();" id="btnCad">Cadastrar</button>
+			<input type="submit" value="Salvar" id="btnCad" />
+	</form>
+	</fieldset>
+</div>
+
