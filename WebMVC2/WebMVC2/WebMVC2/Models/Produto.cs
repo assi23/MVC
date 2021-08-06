@@ -6,9 +6,8 @@ using System.Web;
 
 namespace WebMVC2.Models
 {
-	public class Produto
+	public class Produto : BaseModel
 	{
-		public int Id { get; set; }
 		public string Nome{ get; set; }
 		[Display(Name = "Descrição")]
 		public string Desc { get; set; }

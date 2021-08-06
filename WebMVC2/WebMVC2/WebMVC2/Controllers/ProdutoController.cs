@@ -16,30 +16,30 @@ namespace WebMVC2.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Cadastrar() 
+        public ActionResult Create() 
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Cadastrar(Produto model)
+        public ActionResult Create(Produto model)
         {
             repository.Create(model);
             ModelState.Clear();
             return View();
         }
         [HttpGet]
-        public ActionResult Editar(int id)
+        public ActionResult Edit(int id)
         {
             Produto model = repository.Read(id);
             return View(model);
         }
         [HttpPost]
-        public ActionResult Editar(Produto model)
+        public ActionResult Edit(Produto model)
         {
             repository.Update(model);
-            return RedirectToAction("Listar");
+            return RedirectToAction("List");
         }
-        public ActionResult Listar()
+        public ActionResult List()
         {
             return View(repository.Read());
         }
@@ -50,7 +50,7 @@ namespace WebMVC2.Controllers
         public ActionResult Delete(int id) 
         {
             repository.Delete(id);
-            return RedirectToAction("Listar");
+            return RedirectToAction("List");
         }
         public ActionResult DeletePage(int id)
         {
