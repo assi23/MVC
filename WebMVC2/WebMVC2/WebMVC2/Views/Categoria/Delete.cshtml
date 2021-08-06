@@ -1,0 +1,40 @@
+﻿@model WebMVC2.Models.Categoria
+
+@{
+    ViewBag.namePage = "Deletar Categoria";
+}
+
+<h2>Deletar</h2>
+
+<h3>Você tem certeza que quer deletar esta categoria?</h3>
+<div>
+    <h4>Categoria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Setor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Setor)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar a lista", "Index")
+        </div>
+    }
+</div>
