@@ -1,4 +1,4 @@
-﻿* {
+﻿/** {
 	border:0;
 	padding:0;
 	margin:0;
@@ -31,6 +31,7 @@ input {
 
 	input:hover {
 		background: cyan;
+		color:white;
 		cursor: pointer;
 	}
 
@@ -43,4 +44,4 @@ input {
 	#btnCad:hover {
 		background:#002;
 		color:white;
-	}
+	}*/
