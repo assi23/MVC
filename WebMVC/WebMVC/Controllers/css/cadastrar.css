@@ -9,7 +9,7 @@ fieldset {
 	margin: 50px 0 0 20%;
 	background: white;
 	width: 60%;
-	height: 210px;
+	height: 250px;
 	color:black;
 	border:1px solid black;
 }
@@ -30,7 +30,7 @@ input {
 }
 
 	input:hover {
-		background: #002;
+		background: cyan;
 		cursor: pointer;
 	}
 

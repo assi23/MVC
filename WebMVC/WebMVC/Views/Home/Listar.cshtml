@@ -5,17 +5,24 @@
 
 <table>
 	<thead>
+	<th>Id:</th>
 	<th>Marca:</th>
 	<th>Tipo:</th>
 	<th>Distribuidora:</th>
+	<th>Ações</th>
 	</thead>
 	<tbody>
 		@foreach (var cerva in Model)
 		{
 			<tr>
+				<td>@cerva.Id</td>
 				<td>@cerva.Marca</td>
 				<td>@cerva.Tipo</td>
 				<td>@cerva.Distribuidora</td>
+				<td>
+					<a href="/Home/Editar/@cerva.Id"> Editar </a> |
+					<a href="/Home/Deletar/@cerva.Id">Deletar</a>
+				</td>
 			</tr>
 		}
 	</tbody>

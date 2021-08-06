@@ -1,0 +1,24 @@
+﻿@model WebMVC.Models.Cerveja
+@{
+	ViewBag.pageName = "Editando";
+}
+
+<div>
+	<fieldset>
+		<form action="/Home/Editar" method="post">
+			<label for="Id">Id:</label>
+			<input type="number" name="Id" id="Id" value="@Model.Id" readonly="readonly">
+
+			<label for="marca">Marca:</label>
+			<input type="text" name="marca" id="marca" value="@Model.Marca">
+
+			<label for="Tipo">Tipo:</label>
+			<input type="text" name="tipo" id="tipo" value="@Model.Tipo">
+
+			<label for="distri">Distribuidora:</label>
+			<input type="text" name="distribuidora" id="distribuidora" value="@Model.Distribuidora">
+
+			<input type="submit" value="Salvar" id="btnCad" />
+		</form>
+	</fieldset>
+</div>

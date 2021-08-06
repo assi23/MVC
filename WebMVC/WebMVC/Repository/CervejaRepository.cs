@@ -18,5 +18,24 @@ namespace WebMVC.Repository
 		{
 			return listaCerveja;
 		}
+		public Cerveja Listar(int id) 
+		{
+			return listaCerveja.Find(c => c.Id == id);
+		}
+
+		public void Editar(Cerveja model) 
+		{
+			int index = listaCerveja.FindIndex(c => c.Id == model.Id);
+			listaCerveja[index] = model;
+		}
+		public void Deletar(int id) 
+		{
+			Cerveja model = Listar(id);
+			if (model != null) 
+			{
+				listaCerveja.Remove(model);
+			}
+
+		}
 	}
 }

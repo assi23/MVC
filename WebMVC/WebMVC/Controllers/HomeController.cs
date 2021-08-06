@@ -30,6 +30,23 @@ namespace WebMVC.Controllers
 			//é apresentado em listar
 			return View(model);
 		}
+		[HttpGet]
+		public ActionResult Editar(int id) 
+		{
+			Cerveja model = repository.Listar(id);
+			return View(model);
 
+		}
+		[HttpPost]
+		public ActionResult Editar(Cerveja model) 
+		{
+			repository.Editar(model);
+			return RedirectToAction("Listar");
+		}
+		public ActionResult Deletar(int id) 
+		{
+			repository.Deletar(id);
+			return RedirectToAction("Listar");
+		}
 	}
 }
