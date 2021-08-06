@@ -52,5 +52,9 @@ namespace WebMVC2.Controllers
             repository.Delete(id);
             return RedirectToAction("Listar");
         }
+        public ActionResult DeletePage(int id)
+        {
+            return View(repository.Read(id));
+        }
     }
 }

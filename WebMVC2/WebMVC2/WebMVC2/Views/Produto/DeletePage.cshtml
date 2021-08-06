@@ -1,0 +1,41 @@
+﻿@model WebMVC2.Models.Produto
+
+@{
+    ViewBag.namePage = "Deletar"+" "+Model.Nome;
+}
+
+<h2>Deletar</h2>
+
+<h3>Você gostaria de deletar?</h3>
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Desc)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+	@Html.ActionLink("Deletar", "Delete", new { id = Model.Id })
+	|
+	@Html.ActionLink("Back to List", "Index")
+</div>
+    }
+</div>
