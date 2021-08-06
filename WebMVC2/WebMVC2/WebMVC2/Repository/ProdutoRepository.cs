@@ -9,8 +9,11 @@ namespace WebMVC2.Repository
 	public class ProdutoRepository
 	{
 		private static List<Produto> listaProduto = new List<Produto>();
+		private static int id = 1;
 		public void Create(Produto model) 
 		{
+			model.Id = id;
+			id++;
 			listaProduto.Add(model);
 		}
 		public List<Produto> Read()

@@ -164,10 +164,10 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Produto\Index.cshtml" />
-    <Content Include="Views\Produto\Cadastrar.cshtml" />
     <Content Include="Views\Produto\Editar.cshtml" />
     <Content Include="Views\Produto\Listar.cshtml" />
     <Content Include="Views\Produto\Details.cshtml" />
+    <Content Include="Views\Produto\Cadastrar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
